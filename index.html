@@ -4,62 +4,56 @@
   <meta charset="utf-8">
   <title></title>
   <style>
-  body {
-    background: url(https://drive.google.com/file/d/1C-RsonLET6RTOWK1xNScwQmAQDW3qCLL/view?usp=sharing) center center fixed;
-    background-size: cover;
-    text-align: center;
-    height: 100vh; /* Ajusta la altura de la página al 100% del viewport height */
-    margin: 0; /* Elimina el margen predeterminado del cuerpo */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+      body {
+        background-color: lightblue;
+        text-align: center;
+      }
 
-  .lds-ring {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
+      .lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
   }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-  .lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border: 8px solid #fff;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #fff transparent transparent transparent;
-  }
-  .lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
-  }
-  .lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
-  }
-  .lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
-  }
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-</style>
+  </style>
 </head>
 <body>
   <script>
-    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbwdDdiYXK7xXPlNc2Rwg536NH6MKvUBDhEMb6LJSSx4-uXmMpU6f6iV92gqUCllovP2JA/exec";
-    
+    const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbyizSy-Edk6ZY4_p-mhJJXEgnRnkPiRDfuSbT-V-mYk0zv77_vu4XKxPGlmTIKHMUviOQ/exec";
+
     var url = document.location.href;
     var k = url.substr(url.lastIndexOf("k=")+2);
-    
+
     if(k){
       fetch(AS_URL_BASE+'?k='+k)
       .then(r => r.text())
@@ -74,9 +68,9 @@
     }
 
   </script>
-  
+
   <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-  
-  
+
+
 </body>
 </html>
