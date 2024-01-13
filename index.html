@@ -8,7 +8,7 @@
         background-color: lightblue;
         text-align: center;
       }
-
+      
       .lds-ring {
   display: inline-block;
   position: relative;
@@ -50,10 +50,10 @@
 <body>
   <script>
     const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbwSrSnh3OEuDzgs54yzebvqCmFIN2XBfwzkmPU1Rl6MQV7aKRtTtAyxnNdYQ3Yow0QT/exec";
-
+    
     var url = document.location.href;
     var k = url.substr(url.lastIndexOf("k=")+2);
-
+    
     if(k){
       fetch(AS_URL_BASE+'?k='+k)
       .then(r => r.text())
@@ -68,9 +68,9 @@
     }
 
   </script>
-
+  
   <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-
-
+  
+  
 </body>
 </html>
